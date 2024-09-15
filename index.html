@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>בית למכירה</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
+        
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --text-color: #333;
+            --bg-color: #f4f4f4;
+        }
+        
+        body {
+            font-family: 'Heebo', Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 60px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('/api/placeholder/1200/300') center/cover no-repeat;
+            opacity: 0.2;
+            z-index: 1;
+        }
+        header .container {
+            position: relative;
+            z-index: 2;
+        }
+        header h1 {
+            text-align: center;
+            font-size: 3em;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            animation: fadeInUp 1s ease-out;
+        }
+        header p {
+            text-align: center;
+            font-size: 1.2em;
+            margin-top: 10px;
+            animation: fadeInUp 1s ease-out 0.5s backwards;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 40px 0;
+        }
+        .gallery img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+        }
+        .description, .contact {
+            background: white;
+            margin: 20px 0;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .description:hover, .contact:hover {
+            transform: translateY(-5px);
+        }
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .feature {
+            flex-basis: calc(50% - 10px);
+            margin-bottom: 15px;
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+        }
+        .feature-icon {
+            margin-left: 10px;
+            color: var(--accent-color);
+        }
+        .price {
+            font-size: 1.5em;
+            color: var(--accent-color);
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .contact-info {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .contact-item {
+            flex-basis: calc(50% - 10px);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .contact-icon {
+            margin-left: 10px;
+            color: var(--primary-color);
+        }
+        @media (max-width: 768px) {
+            .feature, .contact-item {
+                flex-basis: 100%;
+            }
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>בית מדהים למכירה</h1>
+            <p>גלה את בית חלומותיך</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="gallery">
+            <img src="image/1.jpg" alt="תמונה של הבית 1">
+            <img src="image/2.jpg" alt="תמונה של הבית 2">
+            <img src="image/3.jpg" alt="תמונה של הבית 3">
+            <img src="image/4.jpg" alt="תמונה של הבית 4">
+            <img src="image/5.jpg" alt="תמונה של הבית 5">
+            <img src="image/6.jpg" alt="תמונה של הבית 6">
+            <img src="image/7.jpg" alt="תמונה של הבית 7">
+            <img src="image/8.jpg" alt="תמונה של הבית 8">
+            <img src="image/9.jpg" alt="תמונה של הבית 9">
+            <img src="image/10.jpg" alt="תמונה של הבית 10">
+            <img src="image/11.jpg" alt="תמונה של הבית 11">
+            <img src="image/12.jpg" alt="תמונה של הבית 12">
+            <img src="image/13.jpg" alt="תמונה של הבית 13">
+            <img src="image/14.jpg" alt="תמונה של הבית 14">
+            <img src="image/15.jpg" alt="תמונה של הבית 15">
+            <img src="image/16.jpg" alt="תמונה של הבית 16">
+            <img src="image/17.jpg" alt="תמונה של הבית 17">
+            <img src="image/18.jpg" alt="תמונה של הבית 18">
+            <img src="image/19.jpg" alt="תמונה של הבית 19">
+            <img src="image/20.jpg" alt="תמונה של הבית 20">
+            <img src="image/21.jpg" alt="תמונה של הבית 21">
+            <img src="image/22.jpg" alt="תמונה של הבית 22">
+            <img src="image/23.jpg" alt="תמונה של הבית 23">
+            <img src="image/24.jpg" alt="תמונה של הבית 24">
+            <img src="image/25.jpg" alt="תמונה של הבית 25">
+            <img src="image/26.jpg" alt="תמונה של הבית 26">
+            <img src="image/27.jpg" alt="תמונה של הבית 27">
+            <img src="image/28.jpg" alt="תמונה של הבית 28">
+            <img src="image/29.jpg" alt="תמונה של הבית 29">
+            <img src="image/30.jpg" alt="תמונה של הבית 30">
+            <img src="image/31.jpg" alt="תמונה של הבית 31">
+            <img src="image/32.jpg" alt="תמונה של הבית 32">
+            <img src="image/33.jpg" alt="תמונה של הבית 33">
+            <img src="image/34.jpg" alt="תמונה של הבית 34">
+            <img src="image/35.jpg" alt="תמונה של הבית 35">
+            <img src="image/36.jpg" alt="תמונה של הבית 36">
+            <img src="image/37.jpg" alt="תמונה של הבית 37">
+            <img src="image/38.jpg" alt="תמונה של הבית 38">
+            <img src="image/39.jpg" alt="תמונה של הבית 39">
+            <img src="image/40.jpg" alt="תמונה של הבית 40">
+            <img src="image/41.jpg" alt="תמונה של הבית 41">
+        </section>
+
+        <section class="description">
+            <h2>תיאור הנכס</h2>
+            <p>ברוכים הבאים לבית החלומות שלכם! נכס יוקרתי זה ממוקם באחד האזורים המבוקשים ביותר בעיר, ומציע שילוב מושלם של נוחות, סגנון ואלגנטיות. עם עיצוב מודרני ותשומת לב לכל פרט, הבית הזה מציע חוויית מגורים יוצאת דופן.</p>
+            
+            <h3>מאפיינים עיקריים:</h3>
+            <div class="features">
+                <div class="feature">
+                    <span class="feature-icon">🛏️</span>
+                    <span>מספר חדרים: 4</span>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">📏</span>
+                    <span>שטח: 73 מ"ר</span>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">🏢</span>
+                    <span>קומה: 3</span>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">🚗</span>
+                    <span>חניה: צמוד לבניין</span>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">🌴</span>
+                    <span>מרפסת: חלון נפתח כ - 2 מטר כולל איזור לתליית כביסה</span>
+                </div>
+               
+            </div>
+            
+            <p class="price">מחיר: 950,000 ₪</p>
+        </section>
+
+        <section class="contact">
+            <h2>יצירת קשר</h2>
+            <p>מעוניינים לראות את הנכס מקרוב? צרו איתנו קשר עוד היום לתיאום סיור!</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span class="contact-icon">📞</span>
+                    <span>טלפון: 058-4472267</span>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">✉️</span>
+                    <span>אימייל: calanit.madar@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">🕒</span>
+                    <span>שעות פעילות: א'-ה' 9:00-18:00</span>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">📍</span>
+                    <span>כתובת: שאול המלך 135, באר שבע</span>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>© 2024 כל הזכויות שמורות לכלנית מדר</p>
+    </footer>
+</body>
+</html>
